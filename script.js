@@ -81,19 +81,7 @@ const array = [
     image.style.background=`url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
     image.style.backgroundSize="cover"
             image.style.backgroundPosition="top"
-    let childContent=array.map((item)=>{
-        return(` <div class="diary">
-        <div class="date">
-            <h2>${item.year} <span>${item.month}</span></h2>
-        </div>
-        <div class="content">
-            <h3>${item.heading}</h3>
-            <p>${item.content}</p>
-        </div>
-    </div>`)
-   
-    })
-     diaries.innerHTML=childContent 
+    createDiary()
   })
   
  //theam button 
@@ -182,6 +170,14 @@ textareaContainer.append(textarea)
         content: content
     }
     array.push(obj);
+    createDiary()
+     textareaContainer.style.display="none"
+     newButton.style.opacity=1
+  })
+  })
+  
+
+function createDiary(){
     let childContent=array.map((item)=>{
         return(` <div class="diary">
         <div class="date">
@@ -194,10 +190,5 @@ textareaContainer.append(textarea)
     </div>`)
    
     })
-     diaries.innerHTML=childContent 
-     textareaContainer.style.display="none"
-     newButton.style.opacity=1
-  })
-  })
-  
-
+     diaries.innerHTML=childContent
+}
