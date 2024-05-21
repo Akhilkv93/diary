@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --box-shadow: 2px 4px 13px black;
+  }
+.container{
+    background-color:#51a0cb;
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+    position: relative;
+    
+}
+.textarea{
+    width: 600px;
+    position: absolute;
+    width: 70vw;
+    z-index: 9;
+    height: 70vh;
+    top: 50%; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translate(-50%, -50%);
+    padding: 10px; 
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shadow);
+    background-color: rgb(236, 235, 144);
+    
+
+    
+}
+.save{
+    bottom: 20%;  
+    left:50%;
+    position: absolute;
+    width: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    z-index: 90;
+    
+}
+.textarea-container{
+    position: absolute;
+    background-color: rgba(172, 46, 46, 0.336);
+    
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    
+}
+.img{   
+    
+    box-shadow: var(--box-shadow);
+    height: 30vh;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+  
+}
+.button{
+    background-color: white;
+    width: 60px;
+    margin: auto;
+    text-align: center;
+    border-radius: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    
+}
+.button:hover{
+    background-color: #705f3a;
+    color: white;
+}
+.diaries{
+    padding: 20px;
+    height: 52vh;
+    overflow-y: scroll;
+    
+    margin-top: 20px;
+   }
+.diary{
+   background-color: #bfc9c7;
+    padding: 28px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: var(--box-shadow);
+    animation: diaryanimation 3s forwards;
+}
+@keyframes diaryanimation{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.btn1,.btn2,.btn3{
+    width: 20PX;
+    height: 20px;
+    
+    margin: 10PX;
+    border-radius: 50PX;
+}
+.btn1{
+ background-color:#51a0cb;  
+}
+.btn2{
+    background-color: rgb(189, 95, 110);
+}
+.btn3{
+    background-color: gray;
+}
+.active{
+    border: 2px solid white;
+}
