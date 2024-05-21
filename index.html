@@ -1,24 +1,41 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Diary</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <div class="container">
-   
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <div class="img">
-        <div class=" btn btn1 "></div>
-        <div class=" btn btn2"></div>
-        <div class=" btn btn3"></div>
+      <button
+        class="theme-button"
+        style="background-color: #51a0cb"
+        data-theme="blue"
+      ></button>
+      <button
+        class="theme-button"
+        style="background-color: #bd5f6e"
+        data-theme="red"
+      ></button>
+      <button
+        class="theme-button"
+        style="background-color: #808080"
+        data-theme="grey"
+      ></button>
     </div>
     <div class="diaries"></div>
-   <div class="button"><b>New</b></div>
- </div>  
- <script src="script.js"></script> 
-</body>
+    <button class="new-button">New</button>
+    <div class="model-container"></div>
+    <form class="model">
+      <div class="title">
+        <h2>New Diary</h2>
+        <button class="close">X</button>
+      </div>
+      <input name="diary-title" type="text" placeholder="Diary title" />
+      <textarea name="diary-entry" placeholder="Type here"></textarea>
+      <button id="save" type="submit">Save</button>
+    </form>
+  </body>
 </html>
